@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Custom implementation of hook_object_details_get_available_xslts to supply
+ * Islandora with our own custom mods transform.
+ */
 function williams_custom_object_details_get_available_xslts() {
   $folder = drupal_get_path("module", "williams_custom") ."/xslts";
   // retrieve the filenames from the system
