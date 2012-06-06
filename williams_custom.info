@@ -1,0 +1,5 @@
+name = Williams custom object display
+description = Supplies a custom xslt transform for Williams' MODS data needs
+package = Williams
+version = 6.x-1.0
+core = 6.x

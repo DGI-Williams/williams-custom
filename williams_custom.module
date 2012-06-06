@@ -1,0 +1,12 @@
+<?php
+
+function williams_custom_object_details_get_available_xslts() {
+  $folder = drupal_get_path("module", "williams_custom") ."/xslts";
+  // retrieve the filenames from the system
+  $xslts = file_scan_directory($folder, ".xsl");
+  $options = array();
+  foreach ($xslts as $xsl) {
+    $options[$xsl->filename] = $xsl->basename;
+  }
+  return $options;
+}
