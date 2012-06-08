@@ -243,7 +243,7 @@
 
 <xsl:template match="mods:note[not(@type)]">
   <tr>
-    <td>Comment</td>
+    <td>Note</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
