@@ -24,63 +24,63 @@
   <!--hr/-->
 </xsl:template>
 
-<xsl:template match="mods:titleInfo/mods:title">
+<xsl:template match="mods:titleInfo/mods:title/text()">
   <tr>
     <td>Title</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:subject/mods:hierarchicalGeographic">
+<xsl:template match="mods:subject/mods:hierarchicalGeographic/text()">
   <tr>
     <td>Site</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:note[@type='operation']">
+<xsl:template match="mods:note[@type='operation']/text()">
   <tr>
     <td>Operation</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:note[@type='subop']">
+<xsl:template match="mods:note[@type='subop']/text()">
   <tr>
     <td>Suboperation</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:note[@type='unit']">
+<xsl:template match="mods:note[@type='unit']/text()">
   <tr>
     <td>Unit</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:note[@type='level']">
+<xsl:template match="mods:note[@type='level']/text()">
   <tr>
     <td>Level</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:note[@type='lot']">
+<xsl:template match="mods:note[@type='lot']/text()">
   <tr>
     <td>Lot</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:note[@type='citation']">
+<xsl:template match="mods:note[@type='citation']/text()">
   <tr>
     <td>Citation</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:subject[not(mods:*)]">
+<xsl:template match="mods:subject[not(mods:*)]/text()">
   <tr>
     <td>Subject/Keywords</td>
     <td><xsl:value-of select="."/></td>
@@ -115,168 +115,168 @@
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:language/mods:languageTerm">
+<xsl:template match="mods:language/mods:languageTerm/text()">
   <tr>
     <td>Language (<xsl:value-of select="@authority"/>)</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:identifier[@type='slide']">
+<xsl:template match="mods:identifier[@type='slide']/text()">
   <tr>
     <td>Slide</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:identifier[@type='batch']">
+<xsl:template match="mods:identifier[@type='batch']/text()">
   <tr>
     <td>Batch</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:identifier[@type='catalog']">
+<xsl:template match="mods:identifier[@type='catalog']/text()">
   <tr>
     <td>Catalog</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:identifier[@type='analysis']">
+<xsl:template match="mods:identifier[@type='analysis']/text()">
   <tr>
     <td>Analysis</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:identifier[@type='INAA']">
+<xsl:template match="mods:identifier[@type='INAA']/text()">
   <tr>
     <td>INAA</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:identifier[@type='petrography']">
+<xsl:template match="mods:identifier[@type='petrography']/text()">
   <tr>
     <td>Petrography</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:identifier[@type='vessel']">
+<xsl:template match="mods:identifier[@type='vessel']/text()">
   <tr>
     <td>Vessel</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:accessCondition">
+<xsl:template match="mods:accessCondition/text()">
   <tr>
     <td>Rights</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:typeOfResource">
+<xsl:template match="mods:typeOfResource/text()">
   <tr>
     <td>Type of Resource</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:dateCreated">
+<xsl:template match="mods:dateCreated/text()">
   <tr>
     <td>Date Created</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:subject/mods:temporal">
+<xsl:template match="mods:subject/mods:temporal/text()">
   <tr>
     <td>Time</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:subject/mods:geographic">
+<xsl:template match="mods:subject/mods:geographic/text()">
   <tr>
     <td>Geographic</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:subject[@displayLabel='']/mods:topic">
+<xsl:template match="mods:subject[@displayLabel='']/mods:topic/text()">
   <tr>
     <td>Unit</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:subject[@displayLabel='architectural feature']/mods:topic">
+<xsl:template match="mods:subject[@displayLabel='architectural feature']/mods:topic/text()">
   <tr>
     <td>Architectural Feature</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:subject[@displayLabel='discovery']/mods:topic">
+<xsl:template match="mods:subject[@displayLabel='discovery']/mods:topic/text()">
   <tr>
     <td>Type of Discovery</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:subject[@displayLabel='culture keywords']/mods:topic">
+<xsl:template match="mods:subject[@displayLabel='culture keywords']/mods:topic/text()">
   <tr>
     <td>Cultural Keywords</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:subject[@displayLabel='environmental keywords']/mods:topic">
+<xsl:template match="mods:subject[@displayLabel='environmental keywords']/mods:topic/text()">
   <tr>
     <td>Soil Type</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:note[not(@type)]">
+<xsl:template match="mods:note[not(@type)]/text()">
   <tr>
-    <td>Comment</td>
+    <td>Note</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:abstract">
+<xsl:template match="mods:abstract/text()">
   <tr>
     <td>Description</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:physicalDescription/mods:note">
+<xsl:template match="mods:physicalDescription/mods:note/text()">
   <tr>
     <td>Physical Description</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:physicalDescription/mods:form[@type='material']">
+<xsl:template match="mods:physicalDescription/mods:form[@type='material']/text()">
   <tr>
     <td>Ceramic Type</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:location/mods:physicalLocation">
+<xsl:template match="mods:location/mods:physicalLocation/text()">
   <tr>
     <td>Physical Location</td>
     <td><xsl:value-of select="."/></td>
   </tr>
 </xsl:template>
 
-<xsl:template match="mods:location/mods:url">
+<xsl:template match="mods:location/mods:url/text()">
   <tr>
     <td>Url</td>
     <td><xsl:value-of select="."/></td>
@@ -284,7 +284,7 @@
 </xsl:template>
 
 <xsl:template match="mods:subject/mods:cartographics/mods:coordinates">
-  <tr colspan="2">
+  <tr><td colspan="2">
     <table>
       <tr>
         <td>Suboperation Description</td>
@@ -295,11 +295,11 @@
         <td><xsl:value-of select="."/></td>
       </tr>
     </table>
-  </tr>
+  </td></tr>
 </xsl:template>
 
 <xsl:template match="mods:originInfo">
-  <tr colspan="2">
+  <tr><td colspan="2">
     <table>
       <tr>
         <td>Date Captured</td>
@@ -318,7 +318,7 @@
         <td><xsl:value-of select="mods:dateIssued"/></td>
       </tr>
     </table>
-  </tr>
+  </td></tr>
 </xsl:template>
 
 <xsl:template match="text()"/>
