@@ -283,42 +283,38 @@
   </tr>
 </xsl:template>
 
+<!-- these are grouped together since they logically go together, but it could be
+split into two templates if desired -->
 <xsl:template match="mods:subject/mods:cartographics/mods:coordinates">
-  <tr><td colspan="2">
-    <table>
-      <tr>
-        <td>Suboperation Description</td>
-        <td><xsl:value-of select="../../mods:topic"/></td>
-      </tr>
-      <tr>
-        <td>Coordinates</td>
-        <td><xsl:value-of select="."/></td>
-      </tr>
-    </table>
-  </td></tr>
+  <tr>
+    <td>Suboperation Description</td>
+    <td><xsl:value-of select="../../mods:topic"/></td>
+  </tr>
+  <tr>
+    <td>Coordinates</td>
+    <td><xsl:value-of select="."/></td>
+  </tr>
 </xsl:template>
 
+<!-- these are grouped together since they logically go together, but it could be
+split into four templates if desired -->
 <xsl:template match="mods:originInfo">
-  <tr><td colspan="2">
-    <table>
-      <tr>
-        <td>Date Captured</td>
-        <td><xsl:value-of select="mods:dateCaptured"/></td>
-      </tr>
-      <tr>
-        <td>Publisher</td>
-        <td><xsl:value-of select="mods:publisher"/></td>
-      </tr>
-      <tr>
-        <td>Place of Publication</td>
-        <td><xsl:value-of select="mods:place/mods:placeTerm"/></td>
-      </tr>
-      <tr>
-        <td>Date Published</td>
-        <td><xsl:value-of select="mods:dateIssued"/></td>
-      </tr>
-    </table>
-  </td></tr>
+  <tr>
+    <td>Date Captured</td>
+    <td><xsl:value-of select="mods:dateCaptured"/></td>
+  </tr>
+  <tr>
+    <td>Publisher</td>
+    <td><xsl:value-of select="mods:publisher"/></td>
+  </tr>
+  <tr>
+    <td>Place of Publication</td>
+    <td><xsl:value-of select="mods:place/mods:placeTerm"/></td>
+  </tr>
+  <tr>
+    <td>Date Published</td>
+    <td><xsl:value-of select="mods:dateIssued"/></td>
+  </tr>
 </xsl:template>
 
 <xsl:template match="text()"/>
